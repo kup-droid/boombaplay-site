@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#100e0c" />
+    <meta name="theme-color" content="#17100e" />
     <meta name="color-scheme" content="dark" />
     <title>BOOMBA | Games that go off</title>
     <meta
       name="description"
-      content="BOOMBA is a game design studio creating original slot games for Stake.com, backed by a large production team of designers, CG artists and AI specialists."
+      content="BOOMBA is a game design studio creating original slot games for Stake.com. Meet CATANA WILD: 1,024 ways, Wild multipliers stamped up to &times;100 and a 50,000&times; maximum win."
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="BOOMBA" />
@@ -21,7 +21,10 @@
     <meta property="og:image" content="https://boombaplay.com/og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="BOOMBA: Games that go off. Posters for KITSUNE and CAPITANO." />
+    <meta
+      property="og:image:alt"
+      content="BOOMBA: Games that go off. Fuse the bulldog next to the masked cat from CATANA WILD."
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://boombaplay.com/" />
     <script type="application/ld+json">
@@ -51,16 +54,16 @@
     >
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <script type="module" crossorigin src="./assets/index-Jcv1FZsM.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-1OxWq-iX.css">
+    <script type="module" crossorigin src="./assets/index-D262UXkK.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D37-ToT2.css">
   </head>
   <body>
     <div class="intro" aria-hidden="true" data-intro>
       <img
         class="intro__logo"
-        src="./assets/boomba-logo-sm-Dj_3wAxK.webp"
-        width="560"
-        height="187"
+        src="./assets/boomba-logo-DgUdQAZW.svg"
+        width="2172"
+        height="724"
         alt=""
         data-intro-logo
       />
@@ -68,6 +71,14 @@
         <span class="intro__burn" data-intro-burn></span>
       </div>
       <div class="intro__flash" data-intro-flash></div>
+      <img
+        class="intro__blast"
+        src="./assets/catana-blast-aPw0fDz0.webp"
+        width="900"
+        height="900"
+        alt=""
+        data-intro-blast
+      />
     </div>
 
     <a class="skip-link" href="#main">Skip to content</a>
@@ -76,10 +87,10 @@
     <header class="nav" data-nav>
       <div class="nav__inner">
         <a class="nav__brand" href="#top" aria-label="BOOMBA, back to top">
-          <img src="./assets/boomba-logo-sm-Dj_3wAxK.webp" width="560" height="187" alt="" />
+          <img src="./assets/boomba-logo-DgUdQAZW.svg" width="2172" height="724" alt="" />
         </a>
         <nav class="nav__links" id="nav-links" aria-label="Primary" data-nav-links>
-          <a href="#games">Games</a>
+          <a href="#catana">CATANA WILD</a>
           <a href="#fuse">Fuse</a>
           <a href="#studio">Studio</a>
           <a href="#crew">Crew</a>
@@ -110,37 +121,33 @@
                   CG artists and AI specialists.
                 </p>
                 <div class="hero__actions" data-hero-fade>
-                  <a
-                    class="btn btn--accent"
-                    href="./play/capitano.html"
-                    target="_blank"
-                    rel="noopener"
-                    data-demo
-                  >
-                    Play CAPITANO<span class="visually-hidden"> (opens in a new tab)</span>
-                  </a>
+                  <a class="btn btn--accent" href="#catana">Meet CATANA WILD</a>
                   <a class="btn btn--ghost" href="#contact">Get in touch</a>
                 </div>
               </div>
 
-              <div class="hero__stage">
+              <div class="hero__stage" data-hero-stage>
                 <div class="hero__disc" data-hero-disc aria-hidden="true"></div>
-                <a class="poster poster--kitsune" href="#kitsune" data-hero-poster data-speed="1.08">
+                <div class="hero__petals hero__petals--back" data-petals="14" aria-hidden="true"></div>
+                <a class="hero__logo" href="#catana" data-hero-prop data-speed="1.12">
                   <img
-                    src="./assets/kitsune-poster-7y21CAEL.webp"
+                    src="./assets/catana-logo-f7GsspEs.webp"
                     width="900"
-                    height="1206"
-                    alt="KITSUNE key art: a masked cat ninja leaping at the Shogun Rat"
+                    height="506"
+                    alt="CATANA WILD, our new game"
                   />
                 </a>
-                <a class="poster poster--capitano" href="#capitano" data-hero-poster data-speed="1.14">
-                  <img
-                    src="./assets/capitano-poster-CdlWxH0p.webp"
-                    width="960"
-                    height="1140"
-                    alt="CAPITANO title screen: a cargo ship loaded with coloured containers"
-                  />
-                </a>
+                <div class="hero__cat" data-hero-prop data-speed="1.06">
+                  <div class="hero__cat-body">
+                    <img
+                      src="./assets/catana-cat-BcxSdk16.webp"
+                      width="680"
+                      height="1024"
+                      alt="The masked cat from CATANA WILD, katana across his shoulders"
+                      data-live-cat
+                    />
+                  </div>
+                </div>
                 <button
                   class="hero__fuse"
                   type="button"
@@ -165,6 +172,7 @@
                   aria-hidden="true"
                   data-boom-burst
                 />
+                <div class="hero__petals hero__petals--front" data-petals="8" aria-hidden="true"></div>
                 <p class="hero__hint" id="boom-hint" aria-live="polite" data-boom-hint data-hero-fade>
                   Push the plunger
                 </p>
@@ -198,178 +206,218 @@
             </p>
           </section>
 
-          <div class="games-intro" id="games">
-            <h2 class="section-title" data-split>Two games so far. Both built from zero.</h2>
-          </div>
-
-          <section class="panel duel" id="kitsune" aria-labelledby="kitsune-title" data-duel>
-            <img
-              class="duel__bg"
-              data-duel-bg
-              src="./assets/kitsune-rooftops-HgfJ6Gmw.webp"
-              width="2688"
-              height="1520"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="duel__inner">
-              <h2 class="duel__title" id="kitsune-title">KITSUNE</h2>
-
-              <div class="duel__arena">
+          <section class="kit" id="catana" aria-labelledby="catana-title">
+            <div class="panel kit-scene" data-kit-scene>
+              <img
+                class="kit-scene__sky"
+                src="./assets/catana-alley-CEqt8PVo.webp"
+                width="1920"
+                height="1086"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                data-kit-sky
+              />
+              <div class="kit-scene__inner">
+                <p class="kit-label kit-scene__label">Our game for Stake Engine</p>
+                <h2 class="kit-scene__logo" id="catana-title" data-kit-logo>
+                  <img
+                    src="./assets/catana-logo-f7GsspEs.webp"
+                    width="900"
+                    height="506"
+                    alt="CATANA WILD"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </h2>
                 <img
-                  class="duel__fighter duel__fighter--cat"
-                  data-duel-cat
-                  src="./assets/kitsune-cat-CVyQRSZG.webp"
-                  width="1020"
-                  height="1536"
-                  alt="A black cat in a fox mask with one paw on a sheathed katana"
+                  class="kit-scene__fighter kit-scene__fighter--cat"
+                  src="./assets/catana-cat-ready-C-07oEjv.webp"
+                  width="640"
+                  height="640"
+                  alt="The masked cat crouched low, one paw on the hilt of his katana"
                   loading="lazy"
                   decoding="async"
+                  data-kit-cat
                 />
                 <img
-                  class="duel__board"
-                  data-duel-board
-                  src="./assets/kitsune-reels-ofip0s0e.webp"
-                  width="1245"
-                  height="912"
-                  alt="KITSUNE reels: a five by four grid of fans, koi, bells, kunai, chrysanthemums and a fox mask Wild"
+                  class="kit-scene__fighter kit-scene__fighter--rat"
+                  src="./assets/catana-rat-DWZ8XH2i.webp"
+                  width="680"
+                  height="1024"
+                  alt="The Shogun Rat in a gold-trimmed robe, grinning behind his fan"
                   loading="lazy"
                   decoding="async"
+                  data-kit-rat
                 />
-                <img
-                  class="duel__fighter duel__fighter--rat"
-                  data-duel-rat
-                  src="./assets/kitsune-rat-JA20Vm4g.webp"
-                  width="1020"
-                  height="1536"
-                  alt="The Shogun Rat in white robes, holding a fan and a stolen talisman"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-
-              <div class="duel__copy">
-                <div class="duel__story">
-                  <p class="duel__tag">Nine lives, one last hunt.</p>
-                  <p class="duel__body">
-                    A masked cat chases the Shogun Rat across old Kyoto. Three chapters, sticky Wilds and a
-                    multiplier that doubles with every chapter.
+                <div class="kit-scene__pitch">
+                  <p class="kit-scene__tag">Nine lives, one last hunt.</p>
+                  <p class="kit-scene__body">
+                    A masked cat hunts the Shogun Rat across old Kyoto. A story-driven slot with sticky Wilds,
+                    stamped multipliers and one clear maximum win.
                   </p>
                 </div>
-                <dl class="facts">
-                  <div class="fact">
-                    <dt>Ways to win</dt>
-                    <dd data-count="1024">1,024</dd>
-                  </div>
-                  <div class="fact">
-                    <dt>Free spins in The Hunt</dt>
-                    <dd data-count="15">15</dd>
-                  </div>
-                  <div class="fact">
-                    <dt>Top chapter multiplier</dt>
-                    <dd data-count="8" data-prefix="&times;">&times;8</dd>
-                  </div>
-                  <div class="fact">
-                    <dt>Target RTP</dt>
-                    <dd data-count="96" data-suffix="%">96%</dd>
-                  </div>
-                </dl>
-                <!-- The KITSUNE demo is withheld until its display fonts are licensed; see scripts/assemble-site.ts. -->
-                <p class="duel__soon">Playable demo coming soon</p>
               </div>
             </div>
-          </section>
 
-          <section class="panel cargo" id="capitano" aria-labelledby="capitano-title">
-            <div class="cargo__inner">
-              <header class="cargo__head">
-                <h2 class="cargo__title" id="capitano-title">CAPITANO</h2>
-                <p class="cargo__tag">One play. Two tilts. Every connection counts.</p>
+            <dl class="facts kit-facts">
+              <div class="fact" data-reveal>
+                <dt>Ways to win on a 5&times;4 grid</dt>
+                <dd data-count="1024">1,024</dd>
+              </div>
+              <div class="fact" data-reveal>
+                <dt>Top Wild multiplier</dt>
+                <dd data-count="100" data-prefix="&times;">&times;100</dd>
+              </div>
+              <div class="fact" data-reveal>
+                <dt>Maximum win, in every mode</dt>
+                <dd data-count="50000" data-suffix="&times;">50,000&times;</dd>
+              </div>
+              <div class="fact" data-reveal>
+                <dt>RTP, in every mode</dt>
+                <dd data-count="96.3" data-suffix="%" data-decimals="2">96.30%</dd>
+              </div>
+            </dl>
+
+            <div class="kit-block">
+              <header class="kit-head">
+                <p class="kit-label">The story</p>
+                <h3 class="kit-title" data-split>Three chapters. One hunt.</h3>
+                <p class="kit-lead" data-reveal>
+                  Every hunt runs fifteen free spins through three chapters, five spins each.
+                </p>
               </header>
-
-              <figure class="cargo__screen" data-clip>
-                <img
-                  src="./assets/capitano-play-D4RAH_pr.webp"
-                  width="2000"
-                  height="1250"
-                  alt="CAPITANO game screen: a cargo ship carrying a five by five grid of coloured containers"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-
-              <ol class="route" data-reveal>
-                <li class="route__stop">
+              <ol class="chapters" aria-label="The three chapters of a hunt" data-kit-chapters>
+                <li class="chapter chapter--alley" data-reveal>
                   <img
-                    src="./assets/capitano-load-Ca8-J8Dy.webp"
-                    width="1260"
-                    height="840"
-                    alt="CAPITANO after loading: the hold full of coloured containers"
+                    src="./assets/catana-alley-CEqt8PVo.webp"
+                    width="1920"
+                    height="1086"
+                    alt="A lantern-lit Kyoto alley under cherry blossom and a low red sun"
                     loading="lazy"
                     decoding="async"
+                    data-kit-drift
                   />
-                  <div class="route__text">
-                    <h3>Load the hold</h3>
-                    <p>Five or more matching containers connect and pay.</p>
+                  <div class="chapter__text">
+                    <span class="chapter__num" aria-hidden="true">I</span>
+                    <h4>The Alley</h4>
+                    <p>The hunt starts among lanterns and shop fronts.</p>
                   </div>
                 </li>
-                <li class="route__stop">
+                <li class="chapter chapter--rooftops" data-reveal>
                   <img
-                    src="./assets/capitano-port-DysAyyCK.webp"
-                    width="1260"
-                    height="840"
-                    alt="CAPITANO tilted to port: the remaining containers have slid to one side"
+                    src="./assets/catana-rooftops-DC96wyZW.webp"
+                    width="1920"
+                    height="1086"
+                    alt="Tiled rooftops and a pagoda against a burning sunset"
                     loading="lazy"
                     decoding="async"
+                    data-kit-drift
                   />
-                  <div class="route__text">
-                    <h3>Tilt to port</h3>
-                    <p>The cargo slides one way. New connections pay again.</p>
+                  <div class="chapter__text">
+                    <span class="chapter__num" aria-hidden="true">II</span>
+                    <h4>The Rooftops</h4>
+                    <p>The chase climbs above the city at sunset.</p>
                   </div>
                 </li>
-                <li class="route__stop">
+                <li class="chapter chapter--temple" data-reveal>
                   <img
-                    src="./assets/capitano-starboard-Dx4o3IVy.webp"
-                    width="1260"
-                    height="840"
-                    alt="CAPITANO tilted to starboard: the containers have slid to the other side"
+                    src="./assets/catana-temple-C74J0ij-.webp"
+                    width="1920"
+                    height="1086"
+                    alt="A temple courtyard with a torii gate under a blood-red moon"
                     loading="lazy"
                     decoding="async"
+                    data-kit-drift
                   />
-                  <div class="route__text">
-                    <h3>Tilt to starboard</h3>
-                    <p>One last shift, one last chance to connect.</p>
+                  <div class="chapter__text">
+                    <span class="chapter__num" aria-hidden="true">III</span>
+                    <h4>The Duel</h4>
+                    <p>It ends at the temple, under a red moon.</p>
                   </div>
                 </li>
               </ol>
-
-              <div class="cargo__foot">
-                <dl class="facts">
-                  <div class="fact">
-                    <dt>Cargo hold</dt>
-                    <dd>5&times;5</dd>
-                  </div>
-                  <div class="fact">
-                    <dt>Exact RTP</dt>
-                    <dd data-count="96" data-suffix="%" data-decimals="2">96.00%</dd>
-                  </div>
-                  <div class="fact">
-                    <dt>Top outcome</dt>
-                    <dd data-count="540" data-suffix="&times;">540&times;</dd>
-                  </div>
-                </dl>
-                <a
-                  class="btn btn--accent"
-                  href="./play/capitano.html"
-                  target="_blank"
-                  rel="noopener"
-                  data-demo
-                >
-                  Play CAPITANO<span class="visually-hidden"> (opens in a new tab)</span>
-                </a>
-              </div>
             </div>
+
+            <div class="kit-block kit-play">
+              <article class="stamp" data-kit-stamp>
+                <div class="stamp__text">
+                  <p class="kit-label">The signature move</p>
+                  <h3 class="kit-title">Every multiplier is stamped on.</h3>
+                  <p>
+                    The cat brings his seal down on a Wild once for every step of the ladder. The last blow
+                    decides what that Wild is worth.
+                  </p>
+                  <ol class="ladder" aria-label="Wild multipliers, lowest to highest" data-kit-ladder>
+                    <li>&times;2</li>
+                    <li>&times;3</li>
+                    <li>&times;5</li>
+                    <li>&times;10</li>
+                    <li>&times;25</li>
+                    <li>&times;50</li>
+                    <li>&times;100</li>
+                  </ol>
+                  <button class="stamp__again" type="button" hidden data-kit-stamp-again>Stamp again</button>
+                </div>
+                <div class="stamp__stage" aria-hidden="true" data-kit-stamp-stage>
+                  <span class="stamp__seal" data-kit-seal><span data-kit-seal-value>&times;100</span></span>
+                  <img
+                    class="stamp__paw"
+                    src="./assets/catana-stamp-CBonuAVP.webp"
+                    width="640"
+                    height="651"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    data-kit-paw
+                  />
+                </div>
+              </article>
+
+              <article class="mode mode--hunt" data-reveal>
+                <span class="mode__sticker mode__sticker--scroll" aria-hidden="true"></span>
+                <p class="mode__price">Buy for 100&times; the bet</p>
+                <h3 class="mode__title">The Hunt</h3>
+                <p>
+                  Fifteen free spins where Wilds stick to the reels and keep their multiplier. Every win is
+                  multiplied by the sticky Wilds it runs through.
+                </p>
+              </article>
+
+              <article class="mode mode--super" data-reveal>
+                <span class="mode__sticker mode__sticker--claw" aria-hidden="true"></span>
+                <p class="mode__price">Buy for 400&times; the bet</p>
+                <h3 class="mode__title">Super Hunt</h3>
+                <p>
+                  Starts with one Wild already locked in, multiplier and all, and the chapters climb &times;2,
+                  &times;3, &times;5.
+                </p>
+              </article>
+            </div>
+
+            <div class="panel kit-symbols">
+              <header class="kit-head">
+                <p class="kit-label">The paytable</p>
+                <h3 class="kit-title" data-split>Nine symbols, all drawn for this game.</h3>
+              </header>
+              <ul class="symbols" data-kit-symbols>
+                <li class="symbol"><span class="symbol__art" aria-hidden="true"></span>Shogun Rat</li>
+                <li class="symbol"><span class="symbol__art" aria-hidden="true"></span>Jade koi</li>
+                <li class="symbol"><span class="symbol__art" aria-hidden="true"></span>Temple bell</li>
+                <li class="symbol"><span class="symbol__art" aria-hidden="true"></span>Kunai</li>
+                <li class="symbol"><span class="symbol__art" aria-hidden="true"></span>Cat eye</li>
+                <li class="symbol"><span class="symbol__art" aria-hidden="true"></span>Chrysan&shy;themum</li>
+                <li class="symbol"><span class="symbol__art" aria-hidden="true"></span>Fox mask Wild</li>
+                <li class="symbol">
+                  <span class="symbol__art" aria-hidden="true"></span>Hunt scroll Scatter
+                </li>
+                <li class="symbol"><span class="symbol__art" aria-hidden="true"></span>Hunt mark</li>
+              </ul>
+            </div>
+
+            <p class="kit-status" data-reveal>
+              <strong>CATANA WILD is built for Stake Engine.</strong> Release date to be announced.
+            </p>
           </section>
 
           <section class="fuse" id="fuse" aria-labelledby="fuse-title">
@@ -430,34 +478,34 @@
                   <div class="cell__text">
                     <h3>Original worlds, no reskins.</h3>
                     <p>
-                      Every symbol, character and stage is made for its own game. KITSUNE alone has three
-                      Kyoto backdrops.
+                      Every character, symbol and stage is made for its own game, in one art style from the
+                      first sketch to the last frame.
                     </p>
                   </div>
                   <img
                     class="cell__art"
-                    src="./assets/kitsune-symbols-BleeSr_m.webp"
-                    width="1152"
-                    height="1152"
-                    alt="Nine KITSUNE symbols: fan, koi, bell, kunai, cat eye, chrysanthemum, fox mask, scroll and claw marks"
+                    src="./assets/catana-victory-D3rI-oIi.webp"
+                    width="620"
+                    height="933"
+                    alt="The cat from CATANA WILD cheering with his katana raised"
                     loading="lazy"
                     decoding="async"
                   />
                 </article>
 
                 <article class="cell cell--math" data-reveal>
-                  <p class="cell__figure">96.00%</p>
+                  <p class="cell__figure">96.30%</p>
                   <h3>Math you can check.</h3>
                   <p>
-                    CAPITANO returns exactly 96.00%, proven with integer arithmetic across 12,000 catalogued
-                    boards. It is not a simulation estimate.
+                    CATANA WILD is held to a 96.30% return in every mode, with one 50,000&times; maximum win
+                    for the whole game.
                   </p>
                 </article>
 
                 <article class="cell cell--sound" data-reveal>
                   <img
                     class="cell__bg"
-                    src="./assets/kitsune-eyes-TnIhPaSi.webp"
+                    src="./assets/catana-eyes-CymG_eS4.webp"
                     width="1600"
                     height="686"
                     alt=""
@@ -467,19 +515,19 @@
                   <div class="cell__text">
                     <h3>A sound of its own.</h3>
                     <p>
-                      Each game gets its own music and effects. This one plays under the reels in KITSUNE.
+                      Each game gets its own music and effects. This one plays under the reels in CATANA WILD.
                     </p>
                     <div class="player" data-player data-state="idle">
                       <button
                         class="player__toggle"
                         type="button"
-                        aria-label="Play the KITSUNE theme"
+                        aria-label="Play the CATANA WILD theme"
                         data-player-toggle
                       >
                         <span class="player__glyph" aria-hidden="true"></span>
                       </button>
                       <div class="player__meta">
-                        <span>KITSUNE theme</span>
+                        <span>CATANA WILD theme</span>
                         <span class="player__time" data-player-time>0:00</span>
                       </div>
                       <div class="player__bar" aria-hidden="true">
@@ -564,12 +612,12 @@
                       <p>A game design studio with one rule: no filler.</p>
                     </li>
                     <li data-reveal>
-                      <h3>CAPITANO sets sail</h3>
-                      <p>Our first game, with math proven to the last decimal.</p>
+                      <h3>CATANA WILD takes shape</h3>
+                      <p>Story, art direction and math, built from zero.</p>
                     </li>
                     <li data-reveal>
-                      <h3>KITSUNE draws its sword</h3>
-                      <p>A story-driven slot in three chapters.</p>
+                      <h3>CATANA WILD meets Stake Engine</h3>
+                      <p>Three modes, one 50,000&times; maximum win.</p>
                     </li>
                     <li data-reveal>
                       <h3>Next</h3>
@@ -612,15 +660,15 @@
           <div class="footer__inner">
             <img
               class="footer__logo"
-              src="./assets/boomba-logo-sm-Dj_3wAxK.webp"
-              width="560"
-              height="187"
+              src="./assets/boomba-logo-DgUdQAZW.svg"
+              width="2172"
+              height="724"
               alt="BOOMBA"
               loading="lazy"
               decoding="async"
             />
             <nav class="footer__links" aria-label="Footer">
-              <a href="#games">Games</a>
+              <a href="#catana">CATANA WILD</a>
               <a href="#fuse">Fuse</a>
               <a href="#studio">Studio</a>
               <a href="#crew">Crew</a>
@@ -634,7 +682,7 @@
                 loading="lazy"
                 decoding="async"
               />
-              <figcaption>Fuse is off duty. The games are not.</figcaption>
+              <figcaption>Fuse is off duty. The hunt is not.</figcaption>
             </figure>
             <p class="footer__legal">
               BOOMBA is a game design studio creating slot games for Stake.com. Stake and the Stake logo are
@@ -642,28 +690,13 @@
               <a href="mailto:hello@boombaplay.com">hello@boombaplay.com</a>
             </p>
             <p class="footer__legal">
-              Demos use play credits with no cash value. No deposits and no real-money play. For adults only
-              (18+). Play responsibly.
+              CATANA WILD is a game of chance for adults only (18+). Play responsibly.
             </p>
             <p class="footer__copy">&copy; 2026 BOOMBA. All rights reserved.</p>
           </div>
         </footer>
       </div>
     </div>
-
-    <dialog class="age-gate" aria-labelledby="age-gate-title" data-age-gate>
-      <form class="age-gate__body" method="dialog">
-        <h2 class="age-gate__title" id="age-gate-title">Are you 18 or older?</h2>
-        <p>
-          The demos are slot games. They use play credits only, with no deposits and no cash prizes, but they
-          are made for adults.
-        </p>
-        <div class="age-gate__actions">
-          <button class="btn btn--accent" value="yes" data-age-confirm>Yes, I am 18+</button>
-          <button class="btn btn--ghost" value="no">No, go back</button>
-        </div>
-      </form>
-    </dialog>
 
   </body>
 </html>
