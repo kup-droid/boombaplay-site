@@ -1,0 +1,25 @@
+{
+  "status": "LOCAL PROTOTYPE — not validated by Engine",
+  "version": "capitano-base-0.1",
+  "outcomes": 12000,
+  "totalWeight": "655970010",
+  "weightedPayoutHundredths": "62973120960",
+  "exactProof": "62973120960 / (655970010 * 100) = 0.96",
+  "rtp": 0.96,
+  "standardDeviation": 4.55934202067457,
+  "hitRate": 0.5872586644624196,
+  "maxWin": 540,
+  "distinctInitialBoards": 12000,
+  "csvSha256": "7d0b2351ce037d9eaa11f1119ee4602384de3e819c96fefad0c1d624932724c0",
+  "booksSha256": "df43dc933ea21f99198fc65d668e41f3d2535a69ba1e267acdebd10f19c39709",
+  "weights": {
+    "winningWeightUnit": "5164",
+    "losingOutcome": "34953"
+  },
+  "notes": [
+    "12,000 finite outcomes. Expand diversity and review tail distribution before submission.",
+    "The frontend demo reconstructs the exact same events from each selected seed.",
+    "RTP is a long-run weighted expectation, not a session guarantee.",
+    "No RGS transactions or real-money play are connected."
+  ]
+}
