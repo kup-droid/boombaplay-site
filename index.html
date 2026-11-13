@@ -50,8 +50,8 @@
     >
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <script type="module" crossorigin src="./assets/index-BL38axQM.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DghHY9Go.css">
+    <script type="module" crossorigin src="./assets/index-bJUVvvfB.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DJSZVVoD.css">
   </head>
   <body>
     <div class="intro" aria-hidden="true" data-intro>
@@ -139,15 +139,33 @@
                     alt="CAPITANO title screen: a cargo ship loaded with coloured containers"
                   />
                 </a>
-                <img
+                <button
                   class="hero__fuse"
+                  type="button"
+                  aria-describedby="boom-hint"
                   data-hero-fuse
-                  src="./assets/fuse-hero-C8o7U7Hg.webp"
-                  width="1100"
-                  height="1375"
-                  alt="Fuse, the BOOMBA bulldog, with one paw on a lit cartoon bomb"
-                  fetchpriority="high"
+                  data-boom
+                >
+                  <img
+                    src="./assets/fuse-hero-BLHO9g8j.webp"
+                    width="1100"
+                    height="1100"
+                    alt="Push the plunger: Fuse, the BOOMBA bulldog in a yellow hard hat, slamming down a detonator"
+                    fetchpriority="high"
+                  />
+                </button>
+                <img
+                  class="hero__boom"
+                  src="./assets/boom-Dqe3aol-.webp"
+                  width="900"
+                  height="900"
+                  alt=""
+                  aria-hidden="true"
+                  data-boom-burst
                 />
+                <p class="hero__hint" id="boom-hint" aria-live="polite" data-boom-hint data-hero-fade>
+                  Push the plunger
+                </p>
               </div>
             </div>
           </section>
@@ -338,10 +356,10 @@
               <div class="fuse__art">
                 <div class="fuse__disc" aria-hidden="true" data-pop></div>
                 <img
-                  src="./assets/fuse-portrait-DJXceREh.webp"
+                  src="./assets/fuse-portrait-DWBJ0x_M.webp"
                   width="1000"
                   height="1000"
-                  alt="Portrait of Fuse the bulldog with a raised eyebrow and a yellow collar"
+                  alt="Portrait of Fuse in his yellow hard hat, grinning with a lit fuse between his teeth"
                   loading="lazy"
                   decoding="async"
                   data-pop
@@ -350,7 +368,7 @@
               <div class="fuse__copy">
                 <h2 class="section-title" id="fuse-title" data-split>Meet Fuse.</h2>
                 <p class="fuse__lead" data-reveal>
-                  Chief Detonation Officer. English bulldog. On the team since day one.
+                  Chief Detonation Officer. English bulldog. Hard hat on since day one.
                 </p>
                 <p class="fuse__body" data-reveal>
                   Fuse has one job: sit on every build until it is fun. If the tail does not wag, the game
@@ -368,6 +386,10 @@
                   <div class="sheet__row" data-reveal>
                     <dt>Hates</dt>
                     <dd>Reskins, fake jackpots, loud autoplay</dd>
+                  </div>
+                  <div class="sheet__row" data-reveal>
+                    <dt>Side jobs</dt>
+                    <dd>Test pilot, quality control, nap inspector</dd>
                   </div>
                   <div class="sheet__row" data-reveal>
                     <dt>Signature move</dt>
@@ -448,6 +470,15 @@
                 </article>
 
                 <article class="cell cell--player" data-reveal>
+                  <img
+                    class="cell__cool"
+                    src="./assets/fuse-cool-DnXshbT1.webp"
+                    width="900"
+                    height="900"
+                    alt="Fuse in sunglasses, leaning on a bomb and pointing a finger-gun"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <h3>The player comes first.</h3>
                   <ul class="pledges">
                     <li>Sound starts muted.</li>
@@ -488,10 +519,10 @@
                 </li>
                 <li class="role role--fuse" data-reveal>
                   <img
-                    src="./assets/fuse-approve-CaeUGdwb.webp"
+                    src="./assets/fuse-approve-Bwl3SWVm.webp"
                     width="900"
                     height="1125"
-                    alt="Fuse grinning and giving a thumbs-up"
+                    alt="Fuse winking with a thumbs-up and a clipboard under his arm"
                     loading="lazy"
                     decoding="async"
                   />
@@ -530,14 +561,14 @@
           <section class="contact" id="contact" aria-labelledby="contact-title">
             <div class="contact__inner">
               <img
-                class="contact__logo"
-                src="./assets/boomba-logo-Bvv2R9Ec.webp"
-                width="1500"
-                height="500"
-                alt="BOOMBA"
+                class="contact__pilot"
+                src="./assets/fuse-pilot-Dt_isQLC.webp"
+                width="1000"
+                height="1000"
+                alt="Fuse in an aviator cap and yellow scarf, riding a bomb like a rocket"
                 loading="lazy"
                 decoding="async"
-                data-reveal
+                data-fly
               />
               <h2 class="contact__title" id="contact-title" data-split>Want these on your platform?</h2>
               <p class="contact__sub" data-reveal>
@@ -570,10 +601,10 @@
             </nav>
             <figure class="footer__nap">
               <img
-                src="./assets/fuse-sleep-D2KncjTS.webp"
+                src="./assets/fuse-sleep-Df0g6L09.webp"
                 width="1100"
                 height="730"
-                alt="Fuse asleep with his chin on an unlit bomb"
+                alt="Fuse asleep on his back, hard hat over his eyes, snoring"
                 loading="lazy"
                 decoding="async"
               />
