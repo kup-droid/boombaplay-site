@@ -34,12 +34,41 @@
         "description": "Game studio building original slot games."
       }
     </script>
+    <script>
+      // Marks scripted mode and skips the intro once it has played in this tab session.
+      (function (root) {
+        root.classList.add('js');
+        try {
+          if (sessionStorage.getItem('boomba:intro')) root.classList.add('intro-seen');
+        } catch (error) {
+          root.classList.add('intro-seen');
+        }
+      })(document.documentElement);
+    </script>
+    <noscript
+      ><style>.intro{display:none}</style></noscript
+    >
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <script type="module" crossorigin src="./assets/index-CpXJSJFy.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-n6EoSQ8j.css">
+    <script type="module" crossorigin src="./assets/index-BL38axQM.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DghHY9Go.css">
   </head>
   <body>
+    <div class="intro" aria-hidden="true" data-intro>
+      <img
+        class="intro__logo"
+        src="./assets/boomba-logo-sm-Dj_3wAxK.webp"
+        width="560"
+        height="187"
+        alt=""
+        data-intro-logo
+      />
+      <div class="intro__fuse">
+        <span class="intro__burn" data-intro-burn></span>
+      </div>
+      <div class="intro__flash" data-intro-flash></div>
+    </div>
+
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="nav-sentinel" data-nav-sentinel aria-hidden="true"></div>
 
@@ -49,9 +78,10 @@
           <img src="./assets/boomba-logo-sm-Dj_3wAxK.webp" width="560" height="187" alt="" />
         </a>
         <nav class="nav__links" id="nav-links" aria-label="Primary" data-nav-links>
-          <a href="#kitsune">KITSUNE</a>
-          <a href="#capitano">CAPITANO</a>
+          <a href="#games">Games</a>
+          <a href="#fuse">Fuse</a>
           <a href="#studio">Studio</a>
+          <a href="#crew">Crew</a>
         </nav>
         <a class="btn btn--accent btn--sm nav__cta" href="#contact">Get in touch</a>
         <button
@@ -66,357 +96,498 @@
       </div>
     </header>
 
-    <main id="main">
-      <section class="hero" id="top" data-hero>
-        <div class="hero__burst" aria-hidden="true"></div>
-        <div class="hero__inner">
-          <div class="hero__copy">
-            <h1 class="hero__title">
-              <span class="hero__line">Games that</span>
-              <span class="hero__line">go <span class="hero__pop">off.</span></span>
-            </h1>
-            <p class="hero__sub">
-              BOOMBA builds original slot games with their own stories, art and provable math. Try CAPITANO
-              free in your browser.
-            </p>
-            <div class="hero__actions">
-              <a class="btn btn--accent" href="./play/capitano.html" target="_blank" rel="noopener" data-demo>
-                Play CAPITANO<span class="visually-hidden"> (opens in a new tab)</span>
-              </a>
-              <a class="btn btn--ghost" href="#contact">Get in touch</a>
-            </div>
-          </div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main id="main">
+          <section class="hero" id="top" data-hero>
+            <div class="hero__inner">
+              <div class="hero__copy">
+                <h1 class="hero__title" data-hero-title>Games that go <span class="hero__pop">off.</span></h1>
+                <p class="hero__sub" data-hero-fade>
+                  BOOMBA is a slot studio founded in 2026. Original worlds, provable math, and one bulldog who
+                  signs off every game.
+                </p>
+                <div class="hero__actions" data-hero-fade>
+                  <a
+                    class="btn btn--accent"
+                    href="./play/capitano.html"
+                    target="_blank"
+                    rel="noopener"
+                    data-demo
+                  >
+                    Play CAPITANO<span class="visually-hidden"> (opens in a new tab)</span>
+                  </a>
+                  <a class="btn btn--ghost" href="#contact">Get in touch</a>
+                </div>
+              </div>
 
-          <div class="hero__stack">
-            <div class="poster poster--back" data-depth="24">
-              <a class="poster__card" href="#capitano">
+              <div class="hero__stage">
+                <div class="hero__disc" data-hero-disc aria-hidden="true"></div>
+                <a class="poster poster--kitsune" href="#kitsune" data-hero-poster data-speed="1.08">
+                  <img
+                    src="./assets/kitsune-poster-7y21CAEL.webp"
+                    width="900"
+                    height="1206"
+                    alt="KITSUNE key art: a masked cat ninja leaping at the Shogun Rat"
+                  />
+                </a>
+                <a class="poster poster--capitano" href="#capitano" data-hero-poster data-speed="1.14">
+                  <img
+                    src="./assets/capitano-poster-CdlWxH0p.webp"
+                    width="960"
+                    height="1140"
+                    alt="CAPITANO title screen: a cargo ship loaded with coloured containers"
+                  />
+                </a>
                 <img
-                  src="./assets/capitano-poster-CdlWxH0p.webp"
-                  width="960"
-                  height="1140"
-                  alt="CAPITANO title screen: a cargo ship loaded with coloured containers"
-                />
-              </a>
-            </div>
-            <div class="poster poster--front" data-depth="-14">
-              <a class="poster__card" href="#kitsune">
-                <img
-                  src="./assets/kitsune-poster-7y21CAEL.webp"
-                  width="900"
-                  height="1206"
-                  alt="KITSUNE key art: a masked cat ninja leaping at the Shogun Rat"
+                  class="hero__fuse"
+                  data-hero-fuse
+                  src="./assets/fuse-hero-C8o7U7Hg.webp"
+                  width="1100"
+                  height="1375"
+                  alt="Fuse, the BOOMBA bulldog, with one paw on a lit cartoon bomb"
                   fetchpriority="high"
                 />
-              </a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <div class="tape" aria-hidden="true">
-        <div class="tape__track">
-          <span>KITSUNE: The Hunt</span><span class="tape__sep">/</span> <span>1,024 ways</span
-          ><span class="tape__sep">/</span> <span>CAPITANO</span><span class="tape__sep">/</span>
-          <span>Cargo in motion</span><span class="tape__sep">/</span> <span>Free demo</span
-          ><span class="tape__sep">/</span> <span>No real money</span><span class="tape__sep">/</span>
-          <span>KITSUNE: The Hunt</span><span class="tape__sep">/</span> <span>1,024 ways</span
-          ><span class="tape__sep">/</span> <span>CAPITANO</span><span class="tape__sep">/</span>
-          <span>Cargo in motion</span><span class="tape__sep">/</span> <span>Free demo</span
-          ><span class="tape__sep">/</span> <span>No real money</span><span class="tape__sep">/</span>
-        </div>
-      </div>
+          <section class="manifesto" aria-label="How BOOMBA started" data-manifesto>
+            <p class="manifesto__text" data-manifesto-text>
+              We started BOOMBA in 2026 with one rule: nothing ships until the dog is impressed. No reskins.
+              No fake jackpots. No filler.
+            </p>
+          </section>
 
-      <section class="panel duel" id="kitsune" aria-labelledby="kitsune-title" data-duel>
-        <img
-          class="duel__bg"
-          data-duel-bg
-          src="./assets/kitsune-rooftops-HgfJ6Gmw.webp"
-          width="2688"
-          height="1520"
-          alt=""
-          loading="lazy"
-          decoding="async"
-        />
-        <div class="duel__inner">
-          <h2 class="duel__title" id="kitsune-title">KITSUNE</h2>
-
-          <div class="duel__arena">
-            <img
-              class="duel__fighter duel__fighter--cat"
-              data-duel-cat
-              src="./assets/kitsune-cat-CVyQRSZG.webp"
-              width="1020"
-              height="1536"
-              alt="A black cat in a fox mask with one paw on a sheathed katana"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="duel__board"
-              data-duel-board
-              src="./assets/kitsune-reels-ofip0s0e.webp"
-              width="1245"
-              height="912"
-              alt="KITSUNE reels: a five by four grid of fans, koi, bells, kunai, chrysanthemums and a fox mask Wild"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="duel__fighter duel__fighter--rat"
-              data-duel-rat
-              src="./assets/kitsune-rat-JA20Vm4g.webp"
-              width="1020"
-              height="1536"
-              alt="The Shogun Rat in white robes, holding a fan and a stolen talisman"
-              loading="lazy"
-              decoding="async"
-            />
+          <div class="games-intro" id="games">
+            <h2 class="section-title" data-split>Two games so far. Both built from zero.</h2>
           </div>
 
-          <div class="duel__copy">
-            <div class="duel__story">
-              <p class="duel__tag">Nine lives, one last hunt.</p>
-              <p class="duel__body">
-                A masked cat chases the Shogun Rat across old Kyoto. Three chapters, sticky Wilds and a
-                multiplier that doubles with every chapter.
-              </p>
+          <section class="panel duel" id="kitsune" aria-labelledby="kitsune-title" data-duel>
+            <img
+              class="duel__bg"
+              data-duel-bg
+              src="./assets/kitsune-rooftops-HgfJ6Gmw.webp"
+              width="2688"
+              height="1520"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="duel__inner">
+              <h2 class="duel__title" id="kitsune-title">KITSUNE</h2>
+
+              <div class="duel__arena">
+                <img
+                  class="duel__fighter duel__fighter--cat"
+                  data-duel-cat
+                  src="./assets/kitsune-cat-CVyQRSZG.webp"
+                  width="1020"
+                  height="1536"
+                  alt="A black cat in a fox mask with one paw on a sheathed katana"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="duel__board"
+                  data-duel-board
+                  src="./assets/kitsune-reels-ofip0s0e.webp"
+                  width="1245"
+                  height="912"
+                  alt="KITSUNE reels: a five by four grid of fans, koi, bells, kunai, chrysanthemums and a fox mask Wild"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  class="duel__fighter duel__fighter--rat"
+                  data-duel-rat
+                  src="./assets/kitsune-rat-JA20Vm4g.webp"
+                  width="1020"
+                  height="1536"
+                  alt="The Shogun Rat in white robes, holding a fan and a stolen talisman"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="duel__copy">
+                <div class="duel__story">
+                  <p class="duel__tag">Nine lives, one last hunt.</p>
+                  <p class="duel__body">
+                    A masked cat chases the Shogun Rat across old Kyoto. Three chapters, sticky Wilds and a
+                    multiplier that doubles with every chapter.
+                  </p>
+                </div>
+                <dl class="facts">
+                  <div class="fact">
+                    <dt>Ways to win</dt>
+                    <dd data-count="1024">1,024</dd>
+                  </div>
+                  <div class="fact">
+                    <dt>Free spins in The Hunt</dt>
+                    <dd data-count="15">15</dd>
+                  </div>
+                  <div class="fact">
+                    <dt>Top chapter multiplier</dt>
+                    <dd data-count="8" data-prefix="&times;">&times;8</dd>
+                  </div>
+                  <div class="fact">
+                    <dt>Target RTP</dt>
+                    <dd data-count="96" data-suffix="%">96%</dd>
+                  </div>
+                </dl>
+                <!-- The KITSUNE demo is withheld until its display fonts are licensed; see scripts/assemble-site.ts. -->
+                <p class="duel__soon">Playable demo coming soon</p>
+              </div>
             </div>
-            <dl class="facts">
-              <div class="fact">
-                <dt>Ways to win</dt>
-                <dd>1,024</dd>
-              </div>
-              <div class="fact">
-                <dt>Free spins in The Hunt</dt>
-                <dd>15</dd>
-              </div>
-              <div class="fact">
-                <dt>Top chapter multiplier</dt>
-                <dd>&times;8</dd>
-              </div>
-              <div class="fact">
-                <dt>Target RTP</dt>
-                <dd>96%</dd>
-              </div>
-            </dl>
-            <!-- The KITSUNE demo is withheld until its display fonts are licensed; see scripts/assemble-site.ts. -->
-            <p class="duel__soon">Playable demo coming soon</p>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section class="panel cargo" id="capitano" aria-labelledby="capitano-title">
-        <div class="cargo__inner">
-          <header class="cargo__head">
-            <h2 class="cargo__title" id="capitano-title">CAPITANO</h2>
-            <p class="cargo__tag">One play. Two tilts. Every connection counts.</p>
-          </header>
+          <section class="panel cargo" id="capitano" aria-labelledby="capitano-title">
+            <div class="cargo__inner">
+              <header class="cargo__head">
+                <h2 class="cargo__title" id="capitano-title">CAPITANO</h2>
+                <p class="cargo__tag">One play. Two tilts. Every connection counts.</p>
+              </header>
 
-          <figure class="cargo__screen" data-rock>
-            <img
-              src="./assets/capitano-play-D4RAH_pr.webp"
-              width="2000"
-              height="1250"
-              alt="CAPITANO game screen: a cargo ship carrying a five by five grid of coloured containers"
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
+              <figure class="cargo__screen" data-clip>
+                <img
+                  src="./assets/capitano-play-D4RAH_pr.webp"
+                  width="2000"
+                  height="1250"
+                  alt="CAPITANO game screen: a cargo ship carrying a five by five grid of coloured containers"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
 
-          <ol class="route" data-reveal>
-            <li class="route__stop">
-              <img
-                src="./assets/capitano-load-Ca8-J8Dy.webp"
-                width="1260"
-                height="840"
-                alt="CAPITANO after loading: the hold full of coloured containers"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="route__text">
-                <h3>Load the hold</h3>
-                <p>Five or more matching containers connect and pay.</p>
-              </div>
-            </li>
-            <li class="route__stop">
-              <img
-                src="./assets/capitano-port-DysAyyCK.webp"
-                width="1260"
-                height="840"
-                alt="CAPITANO tilted to port: the remaining containers have slid to one side"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="route__text">
-                <h3>Tilt to port</h3>
-                <p>The cargo slides one way. New connections pay again.</p>
-              </div>
-            </li>
-            <li class="route__stop">
-              <img
-                src="./assets/capitano-starboard-Dx4o3IVy.webp"
-                width="1260"
-                height="840"
-                alt="CAPITANO tilted to starboard: the containers have slid to the other side"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="route__text">
-                <h3>Tilt to starboard</h3>
-                <p>One last shift, one last chance to connect.</p>
-              </div>
-            </li>
-          </ol>
+              <ol class="route" data-reveal>
+                <li class="route__stop">
+                  <img
+                    src="./assets/capitano-load-Ca8-J8Dy.webp"
+                    width="1260"
+                    height="840"
+                    alt="CAPITANO after loading: the hold full of coloured containers"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="route__text">
+                    <h3>Load the hold</h3>
+                    <p>Five or more matching containers connect and pay.</p>
+                  </div>
+                </li>
+                <li class="route__stop">
+                  <img
+                    src="./assets/capitano-port-DysAyyCK.webp"
+                    width="1260"
+                    height="840"
+                    alt="CAPITANO tilted to port: the remaining containers have slid to one side"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="route__text">
+                    <h3>Tilt to port</h3>
+                    <p>The cargo slides one way. New connections pay again.</p>
+                  </div>
+                </li>
+                <li class="route__stop">
+                  <img
+                    src="./assets/capitano-starboard-Dx4o3IVy.webp"
+                    width="1260"
+                    height="840"
+                    alt="CAPITANO tilted to starboard: the containers have slid to the other side"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="route__text">
+                    <h3>Tilt to starboard</h3>
+                    <p>One last shift, one last chance to connect.</p>
+                  </div>
+                </li>
+              </ol>
 
-          <div class="cargo__foot">
-            <dl class="facts">
-              <div class="fact">
-                <dt>Cargo hold</dt>
-                <dd>5&times;5</dd>
+              <div class="cargo__foot">
+                <dl class="facts">
+                  <div class="fact">
+                    <dt>Cargo hold</dt>
+                    <dd>5&times;5</dd>
+                  </div>
+                  <div class="fact">
+                    <dt>Exact RTP</dt>
+                    <dd data-count="96" data-suffix="%" data-decimals="2">96.00%</dd>
+                  </div>
+                  <div class="fact">
+                    <dt>Top outcome</dt>
+                    <dd data-count="540" data-suffix="&times;">540&times;</dd>
+                  </div>
+                </dl>
+                <a
+                  class="btn btn--accent"
+                  href="./play/capitano.html"
+                  target="_blank"
+                  rel="noopener"
+                  data-demo
+                >
+                  Play CAPITANO<span class="visually-hidden"> (opens in a new tab)</span>
+                </a>
               </div>
-              <div class="fact">
-                <dt>Exact RTP</dt>
-                <dd>96.00%</dd>
-              </div>
-              <div class="fact">
-                <dt>Top outcome</dt>
-                <dd>540&times;</dd>
-              </div>
-            </dl>
-            <a class="btn btn--accent" href="./play/capitano.html" target="_blank" rel="noopener" data-demo>
-              Play CAPITANO<span class="visually-hidden"> (opens in a new tab)</span>
-            </a>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      <section class="studio" id="studio" aria-labelledby="studio-title">
-        <div class="studio__inner">
-          <h2 class="section-title" id="studio-title" data-reveal>What goes into a BOOMBA game.</h2>
+          <section class="fuse" id="fuse" aria-labelledby="fuse-title">
+            <div class="fuse__inner">
+              <div class="fuse__art">
+                <div class="fuse__disc" aria-hidden="true" data-pop></div>
+                <img
+                  src="./assets/fuse-portrait-DJXceREh.webp"
+                  width="1000"
+                  height="1000"
+                  alt="Portrait of Fuse the bulldog with a raised eyebrow and a yellow collar"
+                  loading="lazy"
+                  decoding="async"
+                  data-pop
+                />
+              </div>
+              <div class="fuse__copy">
+                <h2 class="section-title" id="fuse-title" data-split>Meet Fuse.</h2>
+                <p class="fuse__lead" data-reveal>
+                  Chief Detonation Officer. English bulldog. On the team since day one.
+                </p>
+                <p class="fuse__body" data-reveal>
+                  Fuse has one job: sit on every build until it is fun. If the tail does not wag, the game
+                  does not ship.
+                </p>
+                <dl class="sheet">
+                  <div class="sheet__row" data-reveal>
+                    <dt>Joined</dt>
+                    <dd>2026, day one</dd>
+                  </div>
+                  <div class="sheet__row" data-reveal>
+                    <dt>Loves</dt>
+                    <dd>Big wins, clean paytables, belly rubs</dd>
+                  </div>
+                  <div class="sheet__row" data-reveal>
+                    <dt>Hates</dt>
+                    <dd>Reskins, fake jackpots, loud autoplay</dd>
+                  </div>
+                  <div class="sheet__row" data-reveal>
+                    <dt>Signature move</dt>
+                    <dd>The slow eyebrow</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </section>
 
-          <div class="bento">
-            <article class="cell cell--worlds" data-reveal>
-              <div class="cell__text">
-                <h3>Original worlds, no reskins.</h3>
-                <p>
-                  Every symbol, character and stage is made for its own game. KITSUNE alone has three Kyoto
-                  backdrops.
+          <section class="studio" id="studio" aria-labelledby="studio-title">
+            <div class="studio__inner">
+              <h2 class="section-title" id="studio-title" data-split>How a BOOMBA game gets made.</h2>
+
+              <div class="bento">
+                <article class="cell cell--worlds" data-reveal>
+                  <div class="cell__text">
+                    <h3>Original worlds, no reskins.</h3>
+                    <p>
+                      Every symbol, character and stage is made for its own game. KITSUNE alone has three
+                      Kyoto backdrops.
+                    </p>
+                  </div>
+                  <img
+                    class="cell__art"
+                    src="./assets/kitsune-symbols-BleeSr_m.webp"
+                    width="1152"
+                    height="1152"
+                    alt="Nine KITSUNE symbols: fan, koi, bell, kunai, cat eye, chrysanthemum, fox mask, scroll and claw marks"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </article>
+
+                <article class="cell cell--math" data-reveal>
+                  <p class="cell__figure">96.00%</p>
+                  <h3>Math you can check.</h3>
+                  <p>
+                    CAPITANO returns exactly 96.00%, proven with integer arithmetic across 12,000 catalogued
+                    boards. It is not a simulation estimate.
+                  </p>
+                </article>
+
+                <article class="cell cell--sound" data-reveal>
+                  <img
+                    class="cell__bg"
+                    src="./assets/kitsune-eyes-TnIhPaSi.webp"
+                    width="1600"
+                    height="686"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="cell__text">
+                    <h3>A sound of its own.</h3>
+                    <p>
+                      Each game gets its own music and effects. This one plays under the reels in KITSUNE.
+                    </p>
+                    <div class="player" data-player data-state="idle">
+                      <button
+                        class="player__toggle"
+                        type="button"
+                        aria-label="Play the KITSUNE theme"
+                        data-player-toggle
+                      >
+                        <span class="player__glyph" aria-hidden="true"></span>
+                      </button>
+                      <div class="player__meta">
+                        <span>KITSUNE theme</span>
+                        <span class="player__time" data-player-time>0:00</span>
+                      </div>
+                      <div class="player__bar" aria-hidden="true">
+                        <span class="player__fill" data-player-fill></span>
+                      </div>
+                    </div>
+                    <p class="visually-hidden" role="status" data-player-status></p>
+                  </div>
+                </article>
+
+                <article class="cell cell--player" data-reveal>
+                  <h3>The player comes first.</h3>
+                  <ul class="pledges">
+                    <li>Sound starts muted.</li>
+                    <li>Motion can be switched off.</li>
+                    <li>Every result is settled before the animation plays.</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="crew" id="crew" aria-labelledby="crew-title">
+            <div class="crew__inner">
+              <div class="crew__head">
+                <h2 class="section-title" id="crew-title" data-split>A small crew and one dog.</h2>
+                <p class="crew__lead" data-reveal>
+                  We keep the team small on purpose. The people who draw, balance and score a game are the
+                  same people who answer for it.
                 </p>
               </div>
-              <img
-                class="cell__art"
-                src="./assets/kitsune-symbols-BleeSr_m.webp"
-                width="1152"
-                height="1152"
-                alt="Nine KITSUNE symbols: fan, koi, bell, kunai, cat eye, chrysanthemum, fox mask, scroll and claw marks"
-                loading="lazy"
-                decoding="async"
-              />
-            </article>
 
-            <article class="cell cell--math" data-reveal>
-              <p class="cell__figure">96.00%</p>
-              <h3>Math you can check.</h3>
-              <p>
-                CAPITANO returns exactly 96.00%, proven with integer arithmetic across 12,000 catalogued
-                boards. It is not a simulation estimate.
-              </p>
-            </article>
-
-            <article class="cell cell--sound" data-reveal>
-              <img
-                class="cell__bg"
-                src="./assets/kitsune-eyes-TnIhPaSi.webp"
-                width="1600"
-                height="686"
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="cell__text">
-                <h3>A sound of its own.</h3>
-                <p>Each game gets its own music and effects. This one plays under the reels in KITSUNE.</p>
-                <div class="player" data-player data-state="idle">
-                  <button
-                    class="player__toggle"
-                    type="button"
-                    aria-label="Play the KITSUNE theme"
-                    data-player-toggle
-                  >
-                    <span class="player__glyph" aria-hidden="true"></span>
-                  </button>
-                  <div class="player__meta">
-                    <span>KITSUNE theme</span>
-                    <span class="player__time" data-player-time>0:00</span>
-                  </div>
-                  <div class="player__bar" aria-hidden="true">
-                    <span class="player__fill" data-player-fill></span>
-                  </div>
-                </div>
-                <p class="visually-hidden" role="status" data-player-status></p>
-              </div>
-            </article>
-
-            <article class="cell cell--player" data-reveal>
-              <h3>The player comes first.</h3>
-              <ul class="pledges">
-                <li>Sound starts muted.</li>
-                <li>Motion can be switched off.</li>
-                <li>Every result is settled before the animation plays.</li>
+              <ul class="roles">
+                <li class="role" data-reveal>
+                  <h3>Art</h3>
+                  <p>Every symbol and stage is drawn for the game it lives in.</p>
+                </li>
+                <li class="role" data-reveal>
+                  <h3>Math</h3>
+                  <p>Models are balanced until the published number is exact.</p>
+                </li>
+                <li class="role" data-reveal>
+                  <h3>Sound</h3>
+                  <p>Each game gets its own theme and its own effects.</p>
+                </li>
+                <li class="role" data-reveal>
+                  <h3>Code</h3>
+                  <p>Built for the phone in your hand first, then everything bigger.</p>
+                </li>
+                <li class="role role--fuse" data-reveal>
+                  <img
+                    src="./assets/fuse-approve-CaeUGdwb.webp"
+                    width="900"
+                    height="1125"
+                    alt="Fuse grinning and giving a thumbs-up"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3>Final say</h3>
+                  <p>Fuse. Always Fuse.</p>
+                </li>
               </ul>
-            </article>
+
+              <div class="year" data-year>
+                <p class="year__label" aria-hidden="true">2026</p>
+                <div class="year__track">
+                  <span class="year__line" aria-hidden="true" data-year-line></span>
+                  <ol class="year__list">
+                    <li data-reveal>
+                      <h3>BOOMBA opens</h3>
+                      <p>One room, one rule, one dog.</p>
+                    </li>
+                    <li data-reveal>
+                      <h3>CAPITANO sets sail</h3>
+                      <p>Our first game, with math proven to the last decimal.</p>
+                    </li>
+                    <li data-reveal>
+                      <h3>KITSUNE draws its sword</h3>
+                      <p>A story-driven slot in three chapters.</p>
+                    </li>
+                    <li data-reveal>
+                      <h3>Next</h3>
+                      <p>Something louder. Fuse is still testing it.</p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="contact__inner">
+              <img
+                class="contact__logo"
+                src="./assets/boomba-logo-Bvv2R9Ec.webp"
+                width="1500"
+                height="500"
+                alt="BOOMBA"
+                loading="lazy"
+                decoding="async"
+                data-reveal
+              />
+              <h2 class="contact__title" id="contact-title" data-split>Want these on your platform?</h2>
+              <p class="contact__sub" data-reveal>
+                Operators, aggregators and collaborators: we would love to hear from you.
+              </p>
+              <!-- TODO: add the studio address after "mailto:" once the domain mailbox exists. -->
+              <a class="btn btn--accent btn--lg" href="mailto:?subject=Hello%20BOOMBA" data-reveal
+                >Get in touch</a
+              >
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <div class="footer__inner">
+            <img
+              class="footer__logo"
+              src="./assets/boomba-logo-sm-Dj_3wAxK.webp"
+              width="560"
+              height="187"
+              alt="BOOMBA"
+              loading="lazy"
+              decoding="async"
+            />
+            <nav class="footer__links" aria-label="Footer">
+              <a href="#games">Games</a>
+              <a href="#fuse">Fuse</a>
+              <a href="#studio">Studio</a>
+              <a href="#crew">Crew</a>
+            </nav>
+            <figure class="footer__nap">
+              <img
+                src="./assets/fuse-sleep-D2KncjTS.webp"
+                width="1100"
+                height="730"
+                alt="Fuse asleep with his chin on an unlit bomb"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Fuse is off duty. The games are not.</figcaption>
+            </figure>
+            <p class="footer__legal">
+              Demos use play credits with no cash value. No deposits and no real-money play. For adults only
+              (18+). Play responsibly.
+            </p>
+            <p class="footer__copy">&copy; 2026 BOOMBA. All rights reserved.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact__burst" aria-hidden="true"></div>
-        <div class="contact__inner">
-          <img
-            class="contact__logo"
-            src="./assets/boomba-logo-Bvv2R9Ec.webp"
-            width="1500"
-            height="500"
-            alt="BOOMBA"
-            loading="lazy"
-            decoding="async"
-            data-reveal
-          />
-          <h2 class="contact__title" id="contact-title" data-reveal>Want these on your platform?</h2>
-          <p class="contact__sub" data-reveal>
-            Operators, aggregators and collaborators: we would love to hear from you.
-          </p>
-          <!-- TODO: add the studio address after "mailto:" once the domain mailbox exists. -->
-          <a class="btn btn--accent btn--lg" href="mailto:?subject=Hello%20BOOMBA" data-reveal
-            >Get in touch</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer__inner">
-        <img
-          class="footer__logo"
-          src="./assets/boomba-logo-sm-Dj_3wAxK.webp"
-          width="560"
-          height="187"
-          alt="BOOMBA"
-          loading="lazy"
-          decoding="async"
-        />
-        <nav class="footer__links" aria-label="Footer">
-          <a href="#kitsune">KITSUNE</a>
-          <a href="#capitano">CAPITANO</a>
-          <a href="#studio">Studio</a>
-        </nav>
-        <p class="footer__legal">
-          Demos use play credits with no cash value. No deposits and no real-money play. For adults only
-          (18+).
-        </p>
-        <p class="footer__copy">&copy; 2026 BOOMBA. All rights reserved.</p>
+        </footer>
       </div>
-    </footer>
+    </div>
 
     <dialog class="age-gate" aria-labelledby="age-gate-title" data-age-gate>
       <form class="age-gate__body" method="dialog">
